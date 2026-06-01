@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-primary: #0f172a;
+  --color-brand-accent: #2563eb;
+  --color-brand-light: #f8fafc;
+}
+
+/* Base resets & scrollbar enhancements */
+::selection {
+  background-color: rgba(37, 99, 235, 0.15);
+  color: #2563eb;
+}
+
+/* Bold Typography Theme Styles */
+.bold-header {
+  font-family: var(--font-display), var(--font-sans);
+  font-size: 2.25rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .bold-header {
+    font-size: 2.75rem;
+  }
+}
+
+.stat-card {
+  border: 1px solid #e2e8f0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.dark .stat-card {
+  border-color: #1e293b;
+}
+
+.stat-card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.05);
+}
+
+.dark .stat-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 1);
+}
+
+.dark .glass {
+  background: rgba(17, 25, 39, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(31, 41, 55, 0.6);
+}
+
+.sidebar-active {
+  background-color: #f1f5f9;
+  color: #2563eb;
+  border-right: 3px solid #2563eb;
+}
+
+.dark .sidebar-active {
+  background-color: #1e293b;
+  color: #3b82f6;
+  border-right: 3px solid #3b82f6;
+}
+
+/* Custom fine-grained animation utilities */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Elegant scrollbars for tables and views */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

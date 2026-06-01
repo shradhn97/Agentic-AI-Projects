@@ -1,0 +1,6 @@
+{
+  "name": "AI Project Manager Assistant",
+  "description": "Enterprise-grade co-pilot for product managers and engineering leaders: Auto-generates meeting minutes, writes technical user stories, and analyzes Jira backlogs using Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
